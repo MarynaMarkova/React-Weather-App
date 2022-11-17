@@ -1,0 +1,46 @@
+.Weather .weather-icon-big {
+  position: relative;
+  top: -8px;
+  width: 120px;
+}
+
+.Weather .units-big {
+  font-size: 28px;
+  position: relative;
+  top: -36px;
+  text-decoration: none;
+}
+
+.Weather .search-block,
+.Weather .submit {
+  display: inline;
+  position: relative;
+  top: -45px;
+}
+
+.Weather .search-block {
+  width: 150px;
+}
+
+.Weather .currentLocation {
+  margin-top: -100px;
+  width: 193px;
+}
+
+.Weather .details {
+  margin-top: 210px;
+}
+
+.Weather .day {
+  margin-top: 130px;
+}
+
+.Weather .feels,
+.Weather .humidity,
+.Weather .wind,
+.Weather .date,
+.Weather .month,
+.Weather .hours,
+.Weather .minutes {
+  font-weight: bolder;
+}
