@@ -88,6 +88,7 @@ export default function Weather() {
           href="https://github.com/MarynaMarkova/React-Weather-App"
           className="profileLink"
           target="_blank"
+          rel="noreferrer"
           title="Github code"
         >
           Open-source
@@ -97,6 +98,7 @@ export default function Weather() {
           href="https://www.linkedin.com/in/maryna-markova/"
           className="profileLink"
           target="_blank"
+          rel="noreferrer"
           title="Linkedin"
         >
           Maryna Markova
