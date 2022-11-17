@@ -57,7 +57,7 @@ export default function Weather() {
                 type="search"
                 className="form-control search-block cityInput"
                 placeholder="Enter a city"
-                autofocus="on"
+                autoFocus="on"
               />
 
               <input type="submit" className="submit" value="Go" />
@@ -82,6 +82,25 @@ export default function Weather() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="author">
+        <a
+          href="https://github.com/MarynaMarkova/React-Weather-App"
+          className="profileLink"
+          target="_blank"
+          title="Github code"
+        >
+          Open-source
+        </a>
+        {" by "}
+        <a
+          href="https://www.linkedin.com/in/maryna-markova/"
+          className="profileLink"
+          target="_blank"
+          title="Linkedin"
+        >
+          Maryna Markova
+        </a>
       </div>
     </div>
   );
