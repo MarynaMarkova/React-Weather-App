@@ -1,3 +1,10 @@
+.Weather {
+  border: 1px solid rgb(218, 238, 199);
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 900px;
+}
 .Weather .weather-icon-big {
   position: relative;
   top: -8px;
@@ -43,14 +50,4 @@
 .Weather .hours,
 .Weather .minutes {
   font-weight: bolder;
-}
-
-.profileLink {
-  color: lightgreen;
-  text-decoration: underline;
-}
-
-.author {
-  text-align: center;
-  margin-top: 50px;
 }
