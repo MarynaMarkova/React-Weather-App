@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import WeatherBig from "./WeatherBig";
+import WeatherDetails from "./WeatherDetails";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.city,
@@ -25,41 +26,15 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="row heading">
           <div className="col-3">
-            <ul className="details">
-              <li>
-                Feels like:{" "}
-                <span className="feels">{Math.round(weatherData.feels)}</span>ºC
-              </li>
-              <li>
-                Humidity:{" "}
-                <span className="humidity">{weatherData.humidity}</span>%
-              </li>
-              <li>
-                Wind:{" "}
-                <span className="wind">{Math.round(weatherData.wind)}</span>{" "}
-                km/h
-              </li>
-            </ul>
+            <WeatherDetails details={weatherData} />
           </div>
 
           <div className="col-6">
-            <h1 className="cityPlace">{weatherData.city}</h1>
-            <h2>
-              <img
-                src={weatherData.imageUrl}
-                className="weather-icon-big"
-                alt={weatherData.description}
-              />
-              <span className="temperature-big">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="units-big">ºC</span>
-            </h2>
-            <h3 className="description">{weatherData.description}</h3>
+            <WeatherBig info={weatherData} />
           </div>
 
           <div className="col-3">
-            <form className="search-forn">
+            <form className="search-form">
               <div className="mb-3">
                 <input
                   type="search"

@@ -5,18 +5,6 @@
   border-radius: 10px;
   max-width: 900px;
 }
-.Weather .weather-icon-big {
-  position: relative;
-  top: -8px;
-  width: 120px;
-}
-
-.Weather .units-big {
-  font-size: 28px;
-  position: relative;
-  top: -36px;
-  text-decoration: none;
-}
 
 .Weather .search-block,
 .Weather .submit {
@@ -32,14 +20,4 @@
 .Weather .currentLocation {
   margin-top: -100px;
   width: 193px;
-}
-
-.Weather .details {
-  margin-top: 210px;
-}
-
-.Weather .feels,
-.Weather .humidity,
-.Weather .wind {
-  font-weight: bolder;
 }
