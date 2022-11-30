@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.city,
@@ -13,11 +15,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
-      day: "Monday",
-      date: 23,
-      month: "November",
-      hours: 22,
-      minutes: 48,
+      date: new Date(response.data.time * 1000),
       imageUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
   }
@@ -73,24 +71,12 @@ export default function Weather(props) {
                 <input type="submit" className="submit" value="Go" />
               </div>
             </form>
-
             <button type="button" className="btn btn-success currentLocation">
               Current location
             </button>
-
             <br />
 
-            <ul className="fullDate">
-              <li className="day">{weatherData.day}</li>
-              <li>
-                <span className="date">{weatherData.date}</span> of{" "}
-                <span className="month">{weatherData.month}</span>
-              </li>
-              <li>
-                <span className="hours">{weatherData.hours}</span>:
-                <span className="minutes">{weatherData.minutes}</span>
-              </li>
-            </ul>
+            <FormattedDate date={weatherData.date} />
           </div>
         </div>
       </div>

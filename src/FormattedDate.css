@@ -1,0 +1,10 @@
+.formattedDate .fullDate .day {
+  margin-top: 130px;
+}
+
+.formattedDate .date,
+.formattedDate .month,
+.formattedDate .hours,
+.formattedDate .minutes {
+  font-weight: bolder;
+}

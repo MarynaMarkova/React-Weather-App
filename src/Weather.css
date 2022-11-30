@@ -38,16 +38,8 @@
   margin-top: 210px;
 }
 
-.Weather .day {
-  margin-top: 130px;
-}
-
 .Weather .feels,
 .Weather .humidity,
-.Weather .wind,
-.Weather .date,
-.Weather .month,
-.Weather .hours,
-.Weather .minutes {
+.Weather .wind {
   font-weight: bolder;
 }
