@@ -27,13 +27,3 @@
   margin-top: -100px;
   width: 193px;
 }
-
-.Weather .details {
-  margin-top: 210px;
-}
-
-.Weather .feels,
-.Weather .humidity,
-.Weather .wind {
-  font-weight: bolder;
-}
