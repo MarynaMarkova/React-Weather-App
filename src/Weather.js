@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -20,7 +21,6 @@ export default function Weather(props) {
       imageUrl: response.data.condition.icon_url,
     });
   }
-
   function search() {
     const apiKey = `7fc8ceb1c3d0dcbob733fd665t774f9a`;
     let units = `metric`;
@@ -46,7 +46,8 @@ export default function Weather(props) {
             <ul className="details">
               <li>
                 Feels like:{" "}
-                <span className="feels">{Math.round(weatherData.feels)}</span>ºC
+                <span className="feels">{Math.round(weatherData.feels)}</span>
+                ºC
               </li>
               <li>
                 Humidity:{" "}
@@ -63,15 +64,13 @@ export default function Weather(props) {
           <div className="col-6">
             <h1 className="cityPlace">{weatherData.city}</h1>
             <h2>
+              {" "}
               <img
                 src={weatherData.imageUrl}
                 className="weather-icon-big"
                 alt={weatherData.description}
               />
-              <span className="temperature-big">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="units-big">ºC</span>
+              <WeatherTemperature celsius={weatherData.temperature} />{" "}
             </h2>
             <h3 className="description">{weatherData.description}</h3>
           </div>
