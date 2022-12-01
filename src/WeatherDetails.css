@@ -1,0 +1,9 @@
+.weatherDetails {
+  margin-top: 210px;
+}
+
+.weatherDetails .feels,
+.weatherDetails .humidity,
+.weatherDetails .wind {
+  font-weight: bolder;
+}
