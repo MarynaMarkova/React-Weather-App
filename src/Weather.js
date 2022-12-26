@@ -3,6 +3,7 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherDetails from "./WeatherDetails";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -82,6 +83,9 @@ export default function Weather(props) {
 
             <FormattedDate date={weatherData.date} />
           </div>
+        </div>
+        <div className="WeatherForecast">
+          <WeatherForecast data={weatherData} />
         </div>
       </div>
     );
