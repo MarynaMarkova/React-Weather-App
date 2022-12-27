@@ -76,9 +76,7 @@ export default function Weather(props) {
                 <input type="submit" className="submit" value="Go" />
               </div>
             </form>
-            <button type="button" className="btn btn-success currentLocation">
-              Current location
-            </button>
+
             <br />
 
             <FormattedDate date={weatherData.date} />
